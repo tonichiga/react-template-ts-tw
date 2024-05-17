@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  color: #000000;
+}
+
+html {
+  font-size: 16px;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 10px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1536px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 2560px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 2960px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 3220px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 3840px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 4096px) {
+    font-size: 40px;
+  }
+  @media screen and (min-width: 5120px) {
+    font-size: 48px;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+p {
+  color: #000000;
+}
+
+li {
+  list-style: none;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  /* width: 4px;
+  height: 4px; */
+
+  @apply w-rem-[4px] h-rem-[4px];
+}
+
+/* Track */
+.scroll-bar::-webkit-scrollbar-track {
+  /* border-radius: 25px; */
+
+  @apply bg-gray-15 rounded-rem-[25px];
+}
+
+/* Handle */
+.scroll-bar::-webkit-scrollbar-thumb {
+  /* border-radius: 25px; */
+  @apply bg-gray-30 rounded-rem-[25px];
+}
+.highlight {
+  background: #f4facc;
+  color: #000000;
+}
+
+.scale-1 {
+  transform: scale(1) translateY(0%) !important;
+}
+
+.scale-08 {
+  transform: scale(0.9) translateY(10%) !important;
+}
+
+.scale-06 {
+  transform: scale(0.8) translateY(20%) !important;
+}
+
+/* Disable autocomplete for a specific form or input field */
+form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Disable autocomplete globally for all input fields */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Disable browser's native autocomplete dropdown */
+input:-internal-autofill-selected {
+  background-color: inherit !important;
+  background-image: none !important;
+  color: inherit !important;
+}
+
+.no-secure > input {
+  -webkit-text-security: unset !important;
+  text-security: unset !important;
+  -moz-text-security: unset !important;
+}
+
+input[name="password"] {
+  -webkit-text-security: disc;
+  text-security: disc;
+  -moz-text-security: disc;
+}
+
+/* For Chrome, Safari, and newer versions of Edge */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* For Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Edge versions older than 79 */
+input[type="number"] {
+  -webkit-appearance: none;
+}
+
+/* For Edge version 79 and later */
+input[type="number"] {
+  appearance: textfield;
+}

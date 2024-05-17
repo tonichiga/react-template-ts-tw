@@ -1,0 +1,44 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox + label {
+  position: relative;
+  //   padding-left: 24px;
+  cursor: pointer;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  & > svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.checkbox ~ label .checkbox_icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.checkbox:checked ~ label .checkbox_icon {
+  background: url("/images/check_mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:checked + label::after {
+  display: block;
+}
+
+.default {
+  .checkbox ~ label .checkbox_icon {
+    @apply bg-[transparent] border-[1px] border-gray-20;
+  }
+
+  .checkbox:checked ~ label .checkbox_icon {
+    @apply bg-blue-400 border-[1px] border-blue-400;
+  }
+}

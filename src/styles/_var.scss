@@ -1,0 +1,46 @@
+$breakpoints: (
+  mobile: 380px,
+  tablet: 768px,
+  laptop: 1440px,
+  desktop: 1920px,
+);
+
+:root {
+  .white-theme {
+    --white: #ffffff;
+    --gray-light: #e9e9e9;
+    --gray-00: #fafbfc;
+    --gray-10: #f6f6f6;
+    --gray-15: #ececec;
+    --gray-20: #d9d9d9;
+    --gray-30: #b5b5b5;
+    --gray-80: #b8b8b8;
+    --gray-40: #838383;
+    --gray-50: #838383;
+    --gray-70: #292a2c;
+    --gray: #686868;
+    --gray-dark: #575757;
+    --sidebar-black: #0e1014;
+    --black: #000000;
+    --blue-50: #e5eeff;
+    --blue-950: #00081a;
+    --blue-300: #69f;
+    --blue-400: #3377ff;
+    --blue-500: #0055ff;
+    --red-main: #ff3b30;
+    --red-opacity: #ffebea;
+    --pink: #f1e1e9;
+    --orange: #f3ddca;
+    --warm-yellow: #f4facc;
+    --yellow: #faedcc;
+    --brown: #ece0db;
+    --grey: #e3e2e0;
+    --light-blue: #d6eeea;
+    --dark-blue: #dce2ec;
+    --red: #f1e1e9;
+    --violet: #e6deed;
+    --salad: #deecdc;
+    --purple: #7a4cfd;
+    --green-main: #46cb4b;
+  }
+}
